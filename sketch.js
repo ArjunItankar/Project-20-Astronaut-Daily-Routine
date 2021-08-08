@@ -7,11 +7,12 @@ function preload(){
   bg = loadImage("images/iss.png");
   sleep = loadAnimation("images/sleep.png");
   brush = loadAnimation("images/brush.png");
-  gym1 = loadAnimation("images/gym1.png","images/gym2.png");
-  gym2 = loadAnimation("images/gym11.png","images/gym12.png");
-  eat = loadAnimation("images/eat1.png","images/eat2.png");
-  drink = loadAnimation("images/drink1.png","images/drink2.png");
-  move = loadAnimation("images/move.png","images/move1.png");
+  gym1 = loadAnimation("images/gym1.png", "images/gym2.png");
+  gym2 = loadAnimation("images/gym11.png", "images/gym12.png");
+  eat = loadAnimation("images/eat1.png", "images/eat2.png");
+  drink = loadAnimation("images/drink1.png", "images/drink2.png");
+  //move = loadAnimation("images/move.png", "images/move1.png");
+  move = loadAnimation("images/move.png");
   bath = loadAnimation("images/bath1.png","images/bath2.png");
 }
 
@@ -42,15 +43,17 @@ function draw() {
   
   text("Down Arrow = Gymming 1 (Running) ", 20, 61);
 
-  text(" Left Arrow = Eating ", 20, 81);
+  text("Left Arrow = Eating ", 20, 81);
 
   text("Right Arrow = Bathing ", 20, 101);
 
   text("Space Bar = Sleeping ", 20, 121);
 
-  text("M Arrow = Moving ", 20, 141);
+  text("M Key = Moving ", 20, 141);
 
-  text("N Arrow = Gymming 2 (Cardio)", 20, 161);
+  text("N Key = Gymming 2 (Cardio)", 20, 161);
+
+  text("Shift Key = Drinking", 20, 181);
 
   //Bounce The astronaut off the edges
   edges = createEdgeSprites();
@@ -109,6 +112,14 @@ function draw() {
   if (keyDown("SPACE")){
     astronaut.addAnimation("sleeping", sleep);
     astronaut.changeAnimation("sleeping");
+    astronaut.y = 350;
+    astronaut.velocityX = 0;
+    astronaut.velocityY = 0;
+  }
+
+  if (keyDown("SHIFT")){
+    astronaut.addAnimation("drinking", drink);
+    astronaut.changeAnimation("drinking");
     astronaut.y = 350;
     astronaut.velocityX = 0;
     astronaut.velocityY = 0;
