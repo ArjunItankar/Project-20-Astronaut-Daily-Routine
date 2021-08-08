@@ -80,24 +80,24 @@ function draw() {
     astronaut.addAnimation("eating", eat);
     astronaut.changeAnimation("eating");
     astronaut.y = 350;
-    astronaut.velocityX = 0;
-    astronaut.velocityY = 0;
+    astronaut.velocityX = 2;
+    astronaut.velocityY = 2;
   }
 
   if (keyDown("RIGHT_ARROW")){
     astronaut.addAnimation("bathing", bath);
     astronaut.changeAnimation("bathing");
-    astronaut.y = 350;
-    astronaut.velocityX = 0;
-    astronaut.velocityY = 0;
+    astronaut.y = 250;
+    astronaut.velocityX = 1;
+    astronaut.velocityY = 1;
   }
 
   if (keyDown("m")){
     astronaut.addAnimation("moving", move);
     astronaut.changeAnimation("moving");
-    astronaut.y = 350;
-    astronaut.velocityX = 0;
-    astronaut.velocityY = 0;
+    //astronaut.y = 350;
+    astronaut.velocityX = 1;
+    astronaut.velocityY = 1;
   }
 
 
@@ -121,7 +121,7 @@ function draw() {
     astronaut.addAnimation("drinking", drink);
     astronaut.changeAnimation("drinking");
     astronaut.y = 350;
-    astronaut.velocityX = 0;
-    astronaut.velocityY = 0;
+    astronaut.velocityX = 2;
+    astronaut.velocityY = 2;
   }
 }
