@@ -41,7 +41,7 @@ function draw() {
   
   text("Up Arrow = Brushing ", 20, 41);
   
-  text("Down Arrow = Gymming1 (Running) ", 20, 61);
+  text("Down Arrow = Gymming 1 (Running) ", 20, 61);
 
   text("Left Arrow = Eating ", 20, 81);
 
@@ -51,7 +51,7 @@ function draw() {
 
   text("M Key = Moving ", 20, 141);
 
-  text("N Key = Gymming2 (Cardio)", 20, 161);
+  text("N Key = Gymming 2 (Cardio)", 20, 161);
 
   text("Shift Key = Drinking", 20, 181);
 
